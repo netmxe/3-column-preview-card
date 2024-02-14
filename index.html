@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #F2F2F2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .bg-orange {
+      background-color: hsl(31, 77%, 52%);
+    }
+
+    .bg-blue {
+      background-color: hsl(184, 100%, 22%);
+    }
+
+    .bg-green {
+      background-color: hsl(179, 100%, 13%);
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1440px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 500px;
+      width: 300px;
+      padding: 60px 40px 60px 40px;
+    }
+
+    img{
+      width: 80px;
+      height: auto;
+    }
+
+    .card-title {
+      color: white;
+      font-family: 'Big Shoulders Display';
+      text-transform: uppercase;
+      font-size: 40px;
+      font-weight: 500;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .card-right{
+      border-radius: 0 10px 10px 0;
+    }
+
+    .card-left{
+      border-radius: 10px 0 0 10px;
+    }
+
+    button {
+      background-color: white;
+      width: 150px;
+      height: auto;
+      border: 2px white solid;
+      padding: 15px 20px 15px 20px;
+      border-radius: 35px;
+      font-size: 16px;
+      cursor: pointer;
+      transition-duration: 0.3s;
+      font-weight: 700;
+    }
+
+    button:hover {
+      background: transparent;
+      border: 2px white solid;
+      color: white;
+    }
+
+    .orange{
+      color: hsl(31, 77%, 52%);
+    }
+
+    .blue{
+      color: hsl(184, 100%, 22%);
+    }
+
+    .green{
+      color: hsl(179, 100%, 13%);
+    }
+
+    p{
+      color: hsla(0, 0%, 100%, 0.75);
+      font-family: 'Lexend Deca';
+      font-size: 15px;
+      line-height: 2em;
+      font-weight: 400;
+      width: 70%;
+    }
+
+    @media (max-width: 475px) {
+
+      body{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        display: block;
+        height: auto;
+      }
+
+      .container {
+        flex-direction: column;
+        width: 450px;
+      }
+
+      .card {
+        height: auto;
+      }
+
+    .card-right{
+      border-radius: 0 0px 10px 10px;
+    }
+
+    .card-left{
+      border-radius: 10px 10px 0 0;
+    }
+
+    p{
+      width: 80%;
+    }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card bg-orange card-left">
+        <div>
+          <img src="./images/icon-sedans.svg" alt="sedans">
+          <h3 class="card-title">Sedans</h3>
+          <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+          or on your next road trip.</p>
+        </div>
+          <button class="orange">Learn More</button>
+    </div>
+
+    <div class="card bg-blue">
+        <div>
+          <img src="./images/icon-suvs.svg" alt="suvs">
+          <h3 class="card-title">SUVs</h3>
+          <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+          and off-road adventures.</p>
+          </div>
+          <button class="blue">Learn More</button>
+    </div>
+
+    <div class="card bg-green card-right">
+        <div>
+            <img src="./images/icon-luxury.svg" alt="luxury">
+            <h3 class="card-title">Luxury</h3>
+            <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+            rental and arrive in style.</p>
+        </div>
+          <button class="green">Learn More</button>
+    </div>
+  </div>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>. -->
+  </div>
+</body>
+</html>
